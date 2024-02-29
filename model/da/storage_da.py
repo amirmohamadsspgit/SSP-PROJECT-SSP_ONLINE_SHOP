@@ -24,17 +24,18 @@ class Storage_da:
     def change_storage(self, q1, q2, q3, q4, qd1, qd2, qd3, qd4):
         self.stc_da = Databasemanager()
         if q1 >= 0:
-            qn1 = qd1 - q1
-            self.stc_da.update(1, qn1)
+            qna = qd1 - q1
+            self.stc_da.update(1, qna)
+            print(qna)
         if q2 >= 0:
-            qn2 = qd2 - q2
-            self.stc_da.update(2, qn2)
+            qnb = qd2 - q2
+            self.stc_da.update(2, qnb)
         if q3 >= 0:
-            qn3 = qd3 - q3
-            self.stc_da.update(3, qn3)
+            qnc = qd3 - q3
+            self.stc_da.update(3, qnc)
         if q4 >= 0:
-            qn4 = qd4 - q4
-            self.stc_da.update(4, qn4)
+            qnd = qd4 - q4
+            self.stc_da.update(4, qnd)
 
 # ss = Storage_da()
 # ss.change_storage(1, 1, 1, 1, 10, 10, 10, 10)

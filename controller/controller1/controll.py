@@ -72,8 +72,6 @@ class Controller:
                         case "product4":
                             id1 = 4
                     if q1 <= q12 and q2 <= q22 and q3 <= q32 and q4 <= q42:
-                        stn = Storage_da()
-                        stn.change_storage(q1, q2, q3, q4, q12, q22, q32, q42)
                         tt = stftr.find_by_id(Stuff, id1)
                         ttr = Transaction(ustr[0], tt, p[5], total_price, No1)
                         ttda = Transaction_da()
@@ -84,6 +82,8 @@ class Controller:
                     else:
                         msg.showerror("storage error", "storage is low")
                         break
+                stn = Storage_da()
+                stn.change_storage(q1, q2, q3, q4, q12, q22, q32, q42)
                 if est == 1:
                     po = Payment(ustr[0], total_price, No1)
                     pda = Payment_da()
