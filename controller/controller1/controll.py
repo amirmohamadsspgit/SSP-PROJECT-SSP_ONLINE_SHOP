@@ -10,10 +10,12 @@ from model.entity.payment import Payment
 from model.da.payment_da import Payment_da
 
 
+
 class Controller:
     def log_in(self, user_name, password):
         try:
             from view.view1 import View_buy
+            from view.view1 import View_log
             usda = User_da()
             if usda.find_by_username_and_password(user_name, password):
                 self.entity = usda.find_by_username_and_password(user_name, password)
@@ -22,6 +24,7 @@ class Controller:
                 self.vwb = View_buy(n, f, user_name, password)
             else:
                 msg.showerror("WIN", "USER NOT FOUND ; PLEAS REGISTER")
+                ss = View_log()
         except Exception as e:
             msg.showerror("LOGIN ERROR", e)
 
@@ -91,6 +94,7 @@ class Controller:
                     msg.showinfo("BUY", "THE ORDER WAS SUCCESSFUL")
             else:
                 msg.showerror("pay error", "your payment is low")
+
         except Exception as e:
             msg.showerror("error", e)
             print(e)

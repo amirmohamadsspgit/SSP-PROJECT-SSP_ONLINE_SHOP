@@ -2,6 +2,8 @@ from controller.controller1 import *
 from tkinter import *
 
 
+
+
 class View_register:
     def __init__(self):
         self.winregister = Tk()
@@ -48,8 +50,11 @@ class View_register:
         self.winregister.mainloop()
 
     def register_v(self):
+        from view.view1 import View_log
         self.rg = Controller()
         self.rg.register(self.rn.get(), self.rf.get(), self.ru.get(), self.rp.get(), self.rph.get())
+        self.winregister.destroy()
+        combk = View_log()
 
     def enter(self, event):
         event.widget.config(bg="dark slate gray")

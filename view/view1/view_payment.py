@@ -56,8 +56,10 @@ class View_payment:
         self.winp.mainloop()
 
     def btn_pay(self):
+        from view.view1 import View_log
         list_product = self.list_product
         self.cntp = Controller()
         self.cntp.final_pay(self.pet.get(), self.pety.get(), list_product, self.q1, self.q2, self.q3, self.q4,
                             self.username, self.password)
         self.winp.destroy()
+        bklog = View_log()

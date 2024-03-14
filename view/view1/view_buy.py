@@ -121,7 +121,6 @@ class View_buy:
         self.tree.insert("", END, values=("product2", "ssp", "ssp2", 200, "********", self.ce2.get()))
         self.tree.insert("", END, values=("product3", "ssp", "ssp3", 300, "********", self.ce3.get()))
         self.tree.insert("", END, values=("product4", "ssp", "ssp4", 400, "********", self.ce4.get()))
-        # print(self.list_buy)
 
     def count_up1(self):
         try:

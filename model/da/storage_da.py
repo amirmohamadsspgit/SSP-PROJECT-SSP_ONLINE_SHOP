@@ -26,7 +26,6 @@ class Storage_da:
         if q1 >= 0:
             qna = qd1 - q1
             self.stc_da.update(1, qna)
-            print(qna)
         if q2 >= 0:
             qnb = qd2 - q2
             self.stc_da.update(2, qnb)
